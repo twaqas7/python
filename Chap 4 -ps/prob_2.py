@@ -24,3 +24,12 @@ marks.append(f7)
 marks.sort()
 
 print(marks)
+
+
+# copilot's code
+
+# marks = [int(input(f"Enter the marks of student no {i+1}: ")) for i in range(7)]
+
+# marks.sort()
+
+# print(marks)
