@@ -9,4 +9,4 @@ def f_to_c(fahrenheit):
 fahrenheit = int(input("Enter temperature in Fahrenheit: "))
 
 
-print(f"The temperature in celsius is: {f_to_c(fahrenheit)}")
+print(f"The temperature in celsius is: {f_to_c(fahrenheit):.2f}°C")
