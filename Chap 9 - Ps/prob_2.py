@@ -1,83 +1,29 @@
-# import random
+# The game() function in a program lets a user play a game and returns the score
+# as an integer. You need to read a file ‘Hi-score.txt’ which is either blank or
+# contains the previous Hi-score. You need to write a program to update the Hi-score whenever the game() function breaks the Hi-score.
 
-
-# def game():
-#     print("You are playing a dice game..")
-
-#     score = random.randint(1, 62)
-#     # fetch the high score
-#     with open("highScore.txt") as f:
-#         highScore=f.read()
-#         if highScore!="":
-#             highScore=int(highScore)
-#         else:
-#             highScore=0
-#     print(f"Your score: {score}")
-
-
-#     if score > highScore:
-#         #write this hight score to the file
-#         with open("highScore.txt","w") as f:
-#             f.write(str(score))
-
-#     return score
-
-
-# game()
-
-# import random
-
-
-# def game():
-#     print("You are playing the game..")
-#     score = random.randint(1, 62)
-#     # Fetch the hiscore
-#     with open("hiscore.txt") as f:
-#         hiscore = f.read()
-#         if hiscore != "":
-#             hiscore = int(hiscore)
-#         else:
-#             hiscore = 0
-
-#     print(f"Your score: {score}")
-#     if score > hiscore:
-#         # write this hiscore to the file
-#         with open("hiscore.txt", "w") as f:
-#             f.write(str(score))
-
-#     return score
-
-
-# game()
 
 import random
 
+
 def game():
-    print("You are playing the game...")
-
-    # Generate a random score
+    print("Playing game...")
     score = random.randint(1, 62)
-
-    # Fetch the hiscore from the file
-    try:
-        with open("hiscore.txt", "r") as f:
-            hiscore = f.read()
-            if hiscore:
-                hiscore = int(hiscore)
-            else:
-                hiscore = 0
-    except FileNotFoundError:
-        # If the file doesn't exist, start with a hiscore of 0
-        hiscore = 0
-
+    # fetch the hi-score from the file
+    with open("hiscore.txt") as f:
+        hiscore = f.read()
+        if hiscore != "":
+            hiscore = int(hiscore)
+        else:
+            hiscore = 0
     print(f"Your score: {score}")
-
     if score > hiscore:
-        # Update the hiscore
+        # write the new hiscore to the file
         with open("hiscore.txt", "w") as f:
             f.write(str(score))
-            print("New hiscore recorded!")
+            print("New hi-score is set")
 
     return score
+
 
 game()
