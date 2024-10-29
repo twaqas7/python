@@ -1,3 +1,0 @@
-#  here the word {#####} wil be read and replaced with ######
-
-##### is nice ##### but not a bad ##### 
