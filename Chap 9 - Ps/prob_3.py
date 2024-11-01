@@ -7,6 +7,9 @@ def generateTable(n):
     # for i in range(1, 11):
     #     table += f"{n} X {i} = {n*i}\n"
 
+    import os
+
+    os.makedirs("tables", exist_ok=True)
     with open(f"tables/multiplicaton_table_of_{n}.txt", "w") as f:
         for i in range(1, 11):
             f.write(f"{n} X {i} = {n*i}\n")
